@@ -3,6 +3,7 @@ import Link from "next/link";
 import DetailLink from "@/app/list/DetailLink";
 import ListItem from "@/app/list/ListItem";
 
+export const revalidate = 20;
 export const dynamic = 'force-dynamic'      // 다이나믹 랜더링으로 변경
 
 export default async function List(){
