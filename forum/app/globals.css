@@ -46,6 +46,9 @@ a {
 .navbar {
   background: white;
   padding: 20px;
+  display: flex;
+  align-items: center;
+
 }
 .navbar a {
   margin-right: 10px;

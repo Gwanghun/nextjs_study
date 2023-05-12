@@ -20,11 +20,13 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="navbar">
-          <Link href="/" className="logo">Appleforum</Link>
-          <Link href="/list">List</Link>
-          {
-            session !== null ? <div> <div>{session.user.name}</div> <LogOutBtn /> </div> : <LoginBtn />
-          }
+          <div> <Link href="/" className="logo">Appleforum</Link> </div>
+          <div> <Link href="/list">List</Link> </div>
+          <div>
+            {
+              session !== null ?  <div>{session.user.name} <LogOutBtn /> </div> : <LoginBtn />
+            }
+          </div>
         </div>
         {children}
       </body>
