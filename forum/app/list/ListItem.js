@@ -19,7 +19,15 @@ export default function ListItem( { result }){
 									method: 'POST',
 									body: JSON.stringify({_id: item._id})
 								}).then((res)=>{
-									return res.json();
+									console.log(res);
+									if( res.status === 200 ){
+										return res.json();
+									}
+									else {
+										alert('삭제 실패');
+										return false;
+									}
+
 								}).then((res)=>{
 									e.target.parentElement.style.opacity = 0;
 									setTimeout(()=>{
